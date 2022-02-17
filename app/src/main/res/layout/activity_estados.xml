@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EstadosActivity"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_gravity="center"
+       android:gravity="center">
+
+       <EditText
+           android:id="@+id/edit_sigla_pesquisa"
+           android:layout_width="120sp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:textAlignment="center"
+           android:ems="10"
+           android:maxLength="2"
+           android:hint="Exemplo: SP"
+           android:inputType="text"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <Button
+           android:id="@+id/button_pesquisa"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:text="Buscar"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.498"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/edit_sigla_pesquisa" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cw_uf"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="24dp"
+           android:layout_marginLeft="24dp"
+           android:layout_marginTop="80dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="8dp"
+           >
+
+
+           <TextView
+               android:id="@+id/tv_uf_state"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="15dp"
+               android:text="UF"
+               android:textAlignment="center" />
+
+       </androidx.cardview.widget.CardView>
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cw_state"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="24dp"
+           android:layout_marginLeft="24dp"
+           android:layout_marginTop="10dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="8dp">
+
+           <TextView
+               android:id="@+id/tv_state"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="15dp"
+               android:text="Estado"
+               android:textAlignment="center" />
+
+       </androidx.cardview.widget.CardView>
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cw_cases"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="24dp"
+           android:layout_marginLeft="24dp"
+           android:layout_marginTop="10dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="8dp">
+
+           <TextView
+               android:id="@+id/tv_cases_state"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="15dp"
+               android:text="Casos"
+               android:textAlignment="center" />
+
+       </androidx.cardview.widget.CardView>
+
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cw_deaths"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="24dp"
+           android:layout_marginLeft="24dp"
+           android:layout_marginTop="10dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="8dp">
+
+           <TextView
+               android:id="@+id/tv_deaths_state"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="15dp"
+               android:text="Mortes"
+               android:textAlignment="center" />
+
+       </androidx.cardview.widget.CardView>
+
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cw_suspects"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="24dp"
+           android:layout_marginLeft="24dp"
+           android:layout_marginTop="10dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="8dp">
+
+           <TextView
+               android:id="@+id/tv_suspects_state"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="15dp"
+               android:text="Suspeito"
+               android:textAlignment="center" />
+
+       </androidx.cardview.widget.CardView>
+
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cw_refuses"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="24dp"
+           android:layout_marginLeft="24dp"
+           android:layout_marginTop="10dp"
+           app:cardElevation="10dp"
+           app:cardCornerRadius="8dp">
+
+           <TextView
+               android:id="@+id/tv_refuses_state"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="15dp"
+               android:text="Recusados"
+               android:textAlignment="center" />
+
+       </androidx.cardview.widget.CardView>
+
+
+       <TextView
+           android:id="@+id/tv_date_states"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="15dp"
+           android:text="00/00/0000"
+           android:gravity="end"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="24dp"
+           android:layout_marginLeft="24dp"
+           />
+
+
+   </LinearLayout>
+
+
+</LinearLayout>
